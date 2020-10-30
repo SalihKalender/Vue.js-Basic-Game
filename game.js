@@ -44,7 +44,6 @@ new Vue({
                 this.newGame = true;
             }
         },
-        // * Her function()'un çalışması lazım vue'da
         Cure: function() {
             let IncyourHealt = Math.ceil(Math.random()*25).toFixed(0)
             let IncmnstrHealt = Math.ceil(Math.random()*25).toFixed(0)
@@ -53,8 +52,6 @@ new Vue({
                 addCure = Math.ceil(Math.random() * 20);
             }
             this.yourTotal = this.yourTotal + addCure - IncyourHealt;
-           
-            // * Burada seninde karsı tarafında 0'dan asagıda olma ihtimali yok
         },
         GiveUp: function() {
             this.newGame = true;
@@ -76,15 +73,12 @@ new Vue({
                 transition: "all 0.3s"
             }
         },
-
-       
     },
-    // TODO: DATA'DAKI KELIMELERI ORTAK KULLANMAYI ARASTIR
     watch: {
         yourTotal: function(value) {
             console.log("Çalış Ulan")
             if(value <= 0) {
-                this.yourTotal=0;       //! DEGISTIRECEKSEN EGER DATA'DAKI DEGERI WATCH'DA THIS ILE KULLANMAN LAZIM
+                this.yourTotal=0;      
                 alert("You Lose");
                 this.newGame = true;
             }
@@ -92,7 +86,7 @@ new Vue({
         monsterTotal: function(value) {
             if(value < 0 || value == 0 ) {
                 this.monsterTotal = 0;
-                this.newGame = true;       //! DEGISTIRECEKSEN EGER DATA'DAKI DEGERI WATCH'DA THIS ILE KULLANMAN LAZIM
+                this.newGame = true;      
                 alert("You Won")
             }
         }
