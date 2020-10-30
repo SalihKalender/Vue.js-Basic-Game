@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #333;
+}
+:root {
+    --green: #4b9710;
+    --yellow: #ffdf00;
+}
+#users {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.yourbox , .monsterbox {
+    display: flex;
+    align-items: center;
+}
+.usericon , .monstericon {
+    width: 150px;
+    height: 150px;
+}
+#totals {
+    width: 70%; 
+    margin: auto;
+    display: flex;
+    justify-content: space-between; 
+  
+}
+.yourtotal , .monstertotal {
+    display: inline-block;
+    width: 400px;
+    background-color: var(--green);
+    border-radius: 30px;
+}
+.yourtotal {
+    text-align: left;
+}
+.monstertotal {
+    text-align: right;
+}
+.totalinf {
+    color: #000000;
+}
+.youinf {
+    margin-left: 5px;
+}
+.monsterinf {
+    margin-right: 5px;
+}
+#gamebuttons {
+    margin-top: 50px;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: aqua;
+}
+.newGame {
+    display: flex;
+    justify-content: space-around;
+}
+.gamebtn {
+    padding: 10px 15px;
+    font-size: 15px;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+}
+.gamebtn:focus {    /* * button'ların tıklandıktan sonraki hali focus'tur  */
+    outline: none;
+}
+.gamebtn:hover {
+    cursor: pointer;
+}
+#attack {
+    background-color: green;
+}
+#specialattack {
+    background-color: rgb(34, 46, 34);
+}
+#cure {
+    background-color: grey;
+}
+#giveup {
+    background-color: #da4453;
+}
+#newgame {
+    background-color: indigo;
+}

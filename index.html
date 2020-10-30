@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game">
+        <div id="users">
+            <div class="you">
+                <div class="yourbox">
+                    <img src="img/cowboy6 (2).png" class="usericon">
+                    <h1>You</h1>
+                </div>
+           </div>
+            <div class="monsterbox">
+                <h1>Monster</h1>
+                <img src="img/cowboy6 (1).png" class="usericon">
+            </div>
+        </div>
+        <div id="totals">
+            <div class="yourtotal" :style="ChngyourHlt">
+                <p class="totalinf youinf"> {{ yourTotal }}% </p>
+            </div>
+            <div class="monstertotal" :style="ChngMnstrHlt">
+                <p class="totalinf monsterinf"> {{ monsterTotal }}% </p>
+            </div>
+        </div>
+        <div>
+            <div id="gamebuttons">
+                <div v-if="!newGame" class="newGame">
+                    <button type="button" @click="Attack" class="gamebtn" id="attack">Attack</button>
+                    <button type="button" @click="SpecialAttack" class="gamebtn" id="specialattack">Special Attack</button>
+                    <button type="button" @click.once="Cure" v-once class="gamebtn" id="cure">Cure</button>
+                    <button type="button" @click="GiveUp" class="gamebtn" id="giveup">Give Up</button>
+                </div>
+                <div v-else class="newGame">
+                    <button type="button" @click="startNewGame" class="gamebtn" id="newgame">New Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="game.js" type="text/javascript"></script>
+</body>
+</html>
